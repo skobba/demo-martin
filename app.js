@@ -22,9 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-
 app.use('/martin', (req, res) => {
-
   res.json({"navn" : "Martin"})
 });
 
@@ -33,7 +31,9 @@ app.use('/gjermund', (req, res) => {
   res.json({"navn" : "Gjermund"})
 });
 
-
+app.use('/londal', (req, res) => {
+  res.json({"navn" : "Londal"})
+});
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
