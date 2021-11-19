@@ -28,6 +28,10 @@ app.use('/martin', (req, res) => {
   res.json({"navn" : "Martin"})
 });
 
+app.use('/gjermund', (req, res) => {
+
+  res.json({"navn" : "Gjermund"})
+});
 
 
 // catch 404 and forward to error handler
